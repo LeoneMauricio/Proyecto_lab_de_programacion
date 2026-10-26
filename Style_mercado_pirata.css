@@ -1,0 +1,384 @@
+/*Reinicio los margenes, padding y bordes*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Defino cololes a utilizar*/
+:root {
+    --primary:#3b4550;
+    --primary-dark:#131416;
+    --primary-hover:#0a69ce;
+    --primary-light:#09f;
+    --background:#000000;
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.1);
+    --card-bg: #1e293b;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --input-bg: #1e293b;
+    --hsla-example: hsla(210, 100%, 56%, 1);
+}
+
+
+
+body{
+    font-family: system-ui;
+    background-color: var(--background);
+    color:var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/*Titulos*/
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align: center;
+
+}
+
+
+a {
+    color: var(--primary-light);
+}
+
+a:hover{
+    color:var(--text-primary)
+}
+/*Imagen*/
+.img-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 30px auto;
+    box-sizing:border-box;
+}
+
+.text-cont{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #121a22;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    gap: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 8px 3px rgb(28, 34, 34);
+    color: #8b929b;
+
+    svg {
+        color:#09f;
+        background-color:rgb(19, 89, 136);
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+    }
+
+}
+.copyright{
+    text-align: center;
+}
+
+.menu {
+    position: relative;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background-color: #222;
+    color: white;
+}
+
+/* IZQUIERDA */
+.navegacion {
+    display: flex;
+    gap: 25px;
+}
+
+/* CENTRO */
+.logo {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* DERECHA */
+.usuario {
+    display: flex;
+    gap: 20px;
+
+    margin-left: auto;
+}
+
+/* Enlaces */
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.menu a:hover {
+    color: #00bfff;
+}
+
+/* SVG */
+.logo svg {
+    width: 28px;
+    height: 28px;
+}.menu {
+    position: relative;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    background-color: #222;
+    color: white;
+}
+
+/* IZQUIERDA */
+.nav-inicio {
+    display: flex;
+    gap: 25px;
+}
+
+/* CENTRO */
+.logo {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* DERECHA */
+.usuario {
+    display: flex;
+    gap: 20px;
+
+    margin-left: auto;
+}
+
+/* Enlaces */
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.menu a:hover {
+    color: #00bfff;
+}
+
+/* SVG */
+.logo svg {
+    width: 28px;
+    height: 28px;
+}
+
+.usuario a:last-child {
+    background-color: #00bfff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: white;
+}
+
+.usuario a:last-child:hover {
+    background-color: #008fcc;
+    color: white;
+}
+.btn-submit {
+  /* Fondo con degradado moderno */
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  
+  /* Tipografía y bordes */
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  
+  /* Dimensiones y espaciado */
+  padding: 12px 28px;
+  cursor: pointer;
+  
+  /* Sombra suave */
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.35);
+  
+  /* Transiciones fluidas */
+  transition: all 0.25s ease-in-out;
+  outline: none;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.btn-submit:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.45);
+}
+
+/* Efecto al hacer clic (Active) */
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px 0 rgba(79, 70, 229, 0.35);
+}
+
+/* Accesibilidad (Focus con teclado) */
+.btn-submit:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 2px;
+}.btn-submit {
+  /* Fondo con degradado moderno */
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  
+  /* Tipografía y bordes */
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  
+  /* Dimensiones y espaciado */
+  padding: 12px 28px;
+  cursor: pointer;
+  
+  /* Sombra suave */
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.35);
+  
+  /* Transiciones fluidas */
+  transition: all 0.25s ease-in-out;
+  outline: none;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.btn-submit:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.45);
+}
+
+/* Efecto al hacer clic (Active) */
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px 0 rgba(79, 70, 229, 0.35);
+}
+
+/* Accesibilidad (Focus con teclado) */
+.btn-submit:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 2px;
+}
+
+.form-box {
+  /* Dimensiones y estructura */
+  width: 100%;
+  max-width: 420px;
+  padding: 14px 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  color: #0f172a; /* Texto principal oscuro */
+
+  /* Fondo y bordes */
+  background-color: #f8fafc;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+
+  /* Sombra sutil */
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+
+  /* Transición suave */
+  transition: all 0.25s ease-in-out;
+  outline: none;
+}
+
+/* Estilo del texto Placeholder */
+.form-box::placeholder {
+  color: #64748b;
+  font-style: italic;
+  opacity: 0.85;
+  transition: color 0.25s ease;
+}
+
+/* Estado al hacer clic o escribir (Focus) */
+.form-box:focus {
+  background-color: #ffffff;
+  border-color: #0284c7; /* Azul oceánico tenue */
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.2);
+}
+
+/* Ocultar texto del placeholder al enfocar (Opcional) */
+.form-box:focus::placeholder {
+  color: #94a3b8;
+}
+
+/* Estado al pasar el cursor (Hover) */
+.form-box:hover:not(:focus) {
+  border-color: #94a3b8;
+}
+
+.num-pagina{
+    display: flex;  
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 2rem;
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        color:#09f;
+    
+        &:hover, &:focus{
+            background-color: white;
+        }
+
+        &.is-active{
+            background-color: #00bfff;
+            color: white;
+            pointer-events: none;
+        }
+    }
+}

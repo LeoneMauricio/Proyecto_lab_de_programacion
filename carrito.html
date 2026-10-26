@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style_bazar.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <header class="menu">
+
+    <h2 class="logo">
+        <a href="index.html">Mercado Pirata
+        <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 4c4.418 0 8 3.358 8 7.5c0 1.901 -.755 3.637 -2 4.96l0 2.54a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-2.54c-1.245 -1.322 -2 -3.058 -2 -4.96c0 -4.142 3.582 -7.5 8 -7.5" />
+            <path d="M10 17v3" />
+            <path d="M14 17v3" />
+            <path d="M8 11a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            <path d="M14 11a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+        </svg></a>
+    </h2>
+
+    <nav class="navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="bazar.html">Bazar</a>
+        <a href="">Vender</a>
+    </nav>
+
+    <div class="usuario">
+        <a href="carrito.html">Carrito</a>
+        <a href="">Registrarse</a>
+        <a href="">Iniciar sesión</a>
+    </div>
+
+    <button class="header__carrito-btn" id="btnCarrito">
+    🛒 <span id="contadorCarrito">0</span>
+    </button>
+</header>
+
+    <section class="carrito" id="carrito">
+        <h2 class="seccion__titulo">Tu carrito</h2>
+
+        <div class="carrito__contenedor">
+            <div class="carrito__lista" id="listaCarrito">
+        <!-- Los items se insertan dinámicamente con JS -->
+                <p class="carrito__vacio" id="carritoVacio">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="carrito__resumen" id="resumenCarrito">
+            <h3 class="carrito__resumen-titulo">Resumen</h3>
+        <div class="carrito__linea">
+            <span>Subtotal</span>
+            <span id="subtotal">$0</span>
+        </div>
+        <div class="carrito__linea">
+            <span>IVA (21%)</span>
+            <span id="iva">$0</span>
+        </div>
+        <div class="carrito__linea carrito__linea--total">
+            <span>Total</span>
+            <span id="total">$0</span>
+        </div>
+        <button class="btn btn--primario btn--bloque" id="btnComprar">
+            Finalizar compra
+        </button>
+        <button class="btn btn--secundario btn--bloque" id="btnVaciar">
+            Vaciar carrito
+        </button>
+        </div>
+        </div>
+    </section>
+
+    <footer class="copyright">
+        <small>&copy; 2026 Mauricio Leone dev. Todos los derechos
+    reservados.</small>
+    </footer>
+
+    <script type="module" src="carrito.js"></script>
+</body>
+</html>
+
