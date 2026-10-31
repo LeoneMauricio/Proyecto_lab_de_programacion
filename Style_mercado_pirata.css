@@ -6,27 +6,51 @@
 }
 /*Defino cololes a utilizar*/
 :root {
-    --primary:#3b4550;
-    --primary-dark:#131416;
-    --primary-hover:#0a69ce;
-    --primary-light:#09f;
-    --background:#000000;
-    --text-primary: #ffffff;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
-    --border: rgba(255, 255, 255, 0.1);
-    --card-bg: #1e293b;
-    --shadow: rgba(0, 0, 0, 0.3);
-    --input-bg: #1e293b;
-    --hsla-example: hsla(210, 100%, 56%, 1);
-}
+    /* Colores */
+    --color-primario:      #0f172a;
+    --color-acento:        #f59e0b;
+    --color-acento-hover:  #d97706;
+    --color-fondo:         #9aabb7;
+    --color-fondo-card:    #ffffff;
+    --color-texto:         #1e293b;
+    --color-texto-suave:   #64748b;
+    --color-borde:         #e2e8f0;
+    --color-exito:         #22c55e;
+    --color-error:         #ef4444;
+    --color-badge:         #3b82f6;
+    --color-badge-oferta:  #ef4444;
 
+    /* Tipografía */
+    --fuente-titulo:  'Georgia', serif;
+    --fuente-cuerpo:  'Segoe UI', system-ui, sans-serif;
+
+    /* Espaciado */
+    --espaciado-xs:   0.25rem;
+    --espaciado-sm:   0.5rem;
+    --espaciado-md:   1rem;
+    --espaciado-lg:   1.5rem;
+    --espaciado-xl:   2rem;
+    --espaciado-xxl:  4rem;
+
+  /* Bordes */
+    --radio-sm:  0.25rem;
+    --radio-md:  0.5rem;
+    --radio-lg:  1rem;
+
+  /* Sombras */
+    --sombra-sm:  0 1px 3px rgba(0,0,0,0.08);
+    --sombra-md:  0 4px 12px rgba(0,0,0,0.10);
+    --sombra-lg:  0 8px 24px rgba(0,0,0,0.12);
+
+  /* Transiciones */
+    --transicion: 0.2s ease;
+}
 
 
 body{
     font-family: system-ui;
-    background-color: var(--background);
-    color:var(--text-primary);
+    background-color: var(--color-fondo);
+    color:var(--color-texto);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -68,7 +92,7 @@ a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #121a22;
+    background-color: #253a57;
     text-align: center;
     width: 100%;
     max-width: 800px;

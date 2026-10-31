@@ -1,8 +1,9 @@
-import {agregar_carrito,restar_carrito, btnBorrar, btnRestar, guardarCarrito, actualizarBoton, actualizarContador, btnStyle, btnSum} from './utils/funciones.js'   
+import {agregar_carrito,restar_carrito, guardarCarrito, actualizarBoton, actualizarContador} 
+from './utils/funciones.js'  
 const productos = [
     {
         id: 1,
-        imagen: "🧭",
+        imagen: "./img/brújula.png",
         nombre: "Brújula",
         categoria: "Navegación",
         descripcion: "Apunta siempre al norte - Hierro dulce - Aguja de latón",
@@ -47,12 +48,28 @@ const productos = [
         categoria: "Almacenamiento",
         descripcion: "Cofre(vacio) - 30 cm x 20 cm x 21,5 cm",
         precio: 120.00
+    },
+    {
+        id: 7,
+        imagen: "🦜",
+        nombre: "Loro",
+        categoria: "Mascota",
+        descripcion: "Todo capitan tiene el suyo",
+        precio: 10.00
+    },
+    {
+        id: 8,
+        imagen: "⛵",
+        nombre: "Barco",
+        categoria: "Embarcación",
+        descripcion: "Dimensiones: 25m x 6m",
+        precio: 10000.00
     }
 ]
 
 const grilla_prod = document.getElementById("grillaProducto")
 grilla_prod.innerHTML = productos.map(producto=>`<article class="producto" data-id= "${producto.id}" data-categoria="navegacion">
-                    <div class="producto__img">${producto.imagen}</div>
+                    <div class="producto__img"><img src="${producto.imagen}" alt="${producto.nombre}"</div>
                     <div class="producto__cuerpo">
                         <span class="producto__categoria">${producto.categoria}</span>
                     <h3 class="producto__nombre">${producto.nombre}</h3>
