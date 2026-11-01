@@ -169,6 +169,27 @@ a:hover{
     width: 28px;
     height: 28px;
 }
+.usuario a:first-child {
+    background-color: var(--color-acento);
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: white;
+}
+.usuario a:first-child:hover {
+    background-color: var(--color-acento-hover);
+    color: white;
+}
+
+.usuario a:nth-child(2) {
+    background-color: #1b9a08;
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: white;
+}
+.usuario a:nth-child(2):hover {
+    background-color: #0f7a06;
+    color: white;
+}
 
 .usuario a:last-child {
     background-color: #00bfff;
@@ -188,6 +209,27 @@ a:hover{
     max-width: 1100px;
     margin: 0 auto;
     padding: var(--espaciado-xxl) var(--espaciado-xl);
+}
+
+.seccion__mercancias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaciado-lg);
+    margin-bottom: var(--espaciado-xl);
+    color: var(--color-primario);
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.seccion__mercancias::after{
+    content: "";
+    width: 4rem;
+    height: 0.25rem;
+    border-radius: var(--radio-sm);
+    background-color: var(--color-acento);
 }
 
 .producto__grilla{

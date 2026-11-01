@@ -38,8 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
-
-
 document.getElementById("btnVaciar").addEventListener("click", () => {
     localStorage.removeItem("carrito");
     location.reload(); 
@@ -47,4 +45,4 @@ document.getElementById("btnVaciar").addEventListener("click", () => {
 
 // const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-//actualizarContador(carrito);
+actualizarContador(carrito);

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link rel="stylesheet" href="Style_registro.css">
+</head>
+<body>
+    <header class="menu">
+
+    <h2 class="logo">
+        <a href="index.html">Mercado Pirata
+        <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 4c4.418 0 8 3.358 8 7.5c0 1.901 -.755 3.637 -2 4.96l0 2.54a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-2.54c-1.245 -1.322 -2 -3.058 -2 -4.96c0 -4.142 3.582 -7.5 8 -7.5" />
+            <path d="M10 17v3" />
+            <path d="M14 17v3" />
+            <path d="M8 11a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            <path d="M14 11a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+        </svg></a>
+    </h2>
+
+    <nav class="nav-inicio">
+        <a href="index.html">Inicio</a>
+        <a href="bazar.html">Bazar</a>
+    </nav>
+
+    <div class="usuario">
+        <a href="registro.html">Registrarse</a>
+        <a href="login.html">Iniciar sesión</a>
+    </div>
+</header>
+
+<main class="registro">
+    <section class="registro__tarjeta" aria-labelledby="registroTitulo">
+        <p class="registro__etiqueta">Mercado Pirata</p>
+        <h1 class="registro__titulo" id="registroTitulo">Crea tu cuenta</h1>
+        <p class="registro__descripcion">Regístrate para descubrir y compartir productos en nuestro bazar.</p>
+
+        <form class="registro__formulario" action="#" method="post">
+            <div class="registro__campo">
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    autocomplete="name"
+                    placeholder="Tu nombre"
+                    required>
+            </div>
+
+            <div class="registro__campo">
+                <label for="correo">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    autocomplete="email"
+                    placeholder="nombre@ejemplo.com"
+                    required>
+            </div>
+
+            <div class="registro__campo">
+                <label for="contrasena">Contraseña</label>
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="contrasena"
+                    autocomplete="new-password"
+                    minlength="8"
+                    placeholder="Al menos 8 caracteres"
+                    required>
+            </div>
+
+            <div class="registro__campo">
+                <label for="confirmarContrasena">Confirmar contraseña</label>
+                <input
+                    type="password"
+                    id="confirmarContrasena"
+                    name="confirmarContrasena"
+                    autocomplete="new-password"
+                    minlength="8"
+                    placeholder="Repite tu contraseña"
+                    required>
+            </div>
+
+            <button class="registro__boton" type="submit">Crear cuenta</button>
+        </form>
+
+        <p class="registro__inicio">
+            ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a>
+        </p>
+    </section>
+</main>
+
+</body>
+</html>
