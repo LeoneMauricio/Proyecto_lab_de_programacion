@@ -11,7 +11,7 @@ const productos = [
     },
     {
         id: 2,
-        imagen: "🗡️",
+        imagen: "./img/daga.png",
         nombre: "Daga",
         categoria: "Armas",
         descripcion: "Daga de bolsillo- Hierro",
@@ -19,7 +19,7 @@ const productos = [
     },
     {
         id: 3,
-        imagen: "🔭",
+        imagen: "./img/catalejo.webp",
         nombre: "Catalejo",
         categoria: "Navegación",
         descripcion: "Visión clara - rango de 1500 millas nauticas",
@@ -27,7 +27,7 @@ const productos = [
     },
     {
         id: 4,
-        imagen: "🍺",
+        imagen: "./img/cerveza.webp",
         nombre: "Cerveza",
         categoria: "Bebidas",
         descripcion: "El 2° brebaje más elegido por los piratas",
@@ -35,7 +35,7 @@ const productos = [
     },
     {
         id: 5,
-        imagen: "⚓",
+        imagen: "./img/ancla.webp",
         nombre: "Ancla",
         categoria: "Navegación",
         descripcion: "Ancla de hierro 60 kg",
@@ -43,7 +43,7 @@ const productos = [
     },
     {
         id: 6,
-        imagen: "🪎",
+        imagen: "./img/cofre.webp",
         nombre: "Cofre",
         categoria: "Almacenamiento",
         descripcion: "Cofre(vacio) - 30 cm x 20 cm x 21,5 cm",
@@ -51,41 +51,44 @@ const productos = [
     },
     {
         id: 7,
-        imagen: "🦜",
-        nombre: "Loro",
+        imagen: "./img/guacamayo.webp",
+        nombre: "Guacamayo",
         categoria: "Mascota",
         descripcion: "Todo capitan tiene el suyo",
         precio: 10.00
     },
     {
         id: 8,
-        imagen: "⛵",
+        imagen: "./img/barco.webp",
         nombre: "Barco",
         categoria: "Embarcación",
         descripcion: "Dimensiones: 25m x 6m",
         precio: 10000.00
     }
 ]
-
-const grilla_prod = document.getElementById("grillaProducto")
-grilla_prod.innerHTML = productos.map(producto=>`<article class="producto" data-id= "${producto.id}" data-categoria="navegacion">
-                    <div class="producto__img"><img src="${producto.imagen}" alt="${producto.nombre}"</div>
-                    <div class="producto__cuerpo">
-                        <span class="producto__categoria">${producto.categoria}</span>
-                    <h3 class="producto__nombre">${producto.nombre}</h3>
-                    <p class="producto__descripcion"> ${producto.descripcion}</p>
-                    <div class="producto__footer">
-                        <span class="producto__precio" data-precio=${producto.precio}>${producto.precio} Doblones</span>
-                        <button class="btn--agregar" data-id="${producto.id}">Agregar</button>
-                        <button class="btn--sumar" data-id="${producto.id}">➕</button>
-                        <button class="btn--restar" data-id="${producto.id}">➖</button>
-                        <button class="btn--borrar" data-id="${producto.id}">🗑️</button>
-                    </div>
-                    </div>
-                </article>`).join("")
-
-// Lógica del carrito
-
+    // .map Recorre todos los elementos del array y crea un nuevo array transformado.
+    const grilla_prod = document.getElementById("grillaProducto") /*Busca un elemento HTML por su atributo id */
+    grilla_prod.innerHTML = productos.map(producto => /*Permite leer o modificar el contenido HTML interno de un elemento.*/
+        `<article class="producto" data-id="${producto.id}" data-categoria="navegacion">
+    <div class="producto__img">  
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+    </div>
+    <div class="producto__cuerpo">
+        <span class="producto__categoria">${producto.categoria}</span>
+        <h3 class="producto__nombre">${producto.nombre}</h3>
+        <p class="producto__descripcion">${producto.descripcion}</p>
+        <div class="producto__footer">
+            <span class="producto__precio" data-precio="${producto.precio}">${producto.precio} Doblones</span>
+            <div class="producto__acciones">
+                <button class="btn btn--agregar" data-id="${producto.id}">Agregar</button>
+                <button class="btn btn--sumar" data-id="${producto.id}">➕</button>
+                <button class="btn btn--restar" data-id="${producto.id}">➖</button>
+                <button class="btn btn--borrar" data-id="${producto.id}">🗑️</button>
+            </div>
+        </div>
+    </div>
+</article>`).join("")
+// .join("") Convierte un array en una cadena de texto, separando cada elemento con el valor especificado (en este caso, una cadena vacía).
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 actualizarContador(carrito);

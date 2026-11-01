@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
             div.classList.add("carrito__item");
             div.innerHTML = `
                 <span>${item.nombre}</span>
-                <span>${item.imagen}</span>
                 <span> x ${item.cantidad} = </span>
                 <span>$${item.cantidad * item.precio}</span>
             `;
