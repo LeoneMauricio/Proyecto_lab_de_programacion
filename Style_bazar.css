@@ -205,6 +205,81 @@ a:hover{
 
 /*Productos grilla*/
 
+.buscador {
+    display: block;
+    width: min(100% - 2rem, 32rem);
+    margin: var(--espaciado-xl) auto 0;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+    background-color: var(--color-fondo-card);
+    box-shadow: var(--sombra-sm);
+    color: var(--color-texto);
+    font: inherit;
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.buscador::placeholder {
+    color: var(--color-texto-suave);
+}
+
+.buscador:focus {
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaciado-sm);
+    max-width: 1100px;
+    margin: var(--espaciado-lg) auto 0;
+    padding: 0 var(--espaciado-xl);
+}
+
+.filtros h3 {
+    flex-basis: 100%;
+    margin-bottom: var(--espaciado-xs);
+    color: var(--color-primario);
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    line-height: 1.3;
+    text-align: center;
+}
+
+.filtro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 999px;
+    background-color: var(--color-fondo-card);
+    color: var(--color-primario);
+    font: 600 0.9rem var(--fuente-cuerpo);
+    cursor: pointer;
+    transition: background-color var(--transicion), border-color var(--transicion),
+        color var(--transicion), box-shadow var(--transicion), transform var(--transicion);
+}
+
+.filtro:hover {
+    border-color: var(--color-acento);
+    background-color: var(--color-acento);
+    box-shadow: var(--sombra-sm);
+}
+
+.filtro:focus-visible {
+    outline: 3px solid rgba(245, 158, 11, 0.35);
+    outline-offset: 2px;
+}
+
+.filtro:active {
+    transform: scale(0.97);
+}
+
 .mercancias{
     max-width: 1100px;
     margin: 0 auto;

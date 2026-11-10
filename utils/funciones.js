@@ -107,3 +107,11 @@ export function btnBorrar(e) {
     actualizarContador(nuevoCarrito);
     actualizarBoton(btnAgregar, nuevoCarrito);
 }
+
+export function debounce(funcion, time) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => funcion.apply(this, args), time);
+    };
+}

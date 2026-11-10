@@ -60,7 +60,7 @@ export const productos = [
         id: 8,
         imagen: "./img/barco.webp",
         nombre: "Barco",
-        categoria: "Embarcación",
+        categoria: "Navegación",
         descripcion: "Dimensiones: 25m x 6m",
         precio: 10000.00
     }
