@@ -13,7 +13,7 @@ Proyecto para Laboratorio de programación con carrito funcional.
 ▎     // filtrar por nombre y dibujar la grilla
 ▎   }, 300);
 ▎ });
-▎ • Si no hay resultados, mostrá un mensaje "No encontramos productos". Búsqueda y categoría tienen que funcionar juntas.
+▎ • Si no hay resultados, mostrá un mensaje "No encontramos productos". Búsqueda y categoría tienen que funcionar juntas.✅
 ▎
 ▎ 2️⃣ try/catch en localStorage
 ▎ Hoy tenés JSON.parse(localStorage.getItem("carrito")) || [] en Bazar.js y carrito.js. Si el dato está dañado, la página se rompe. Armá una función segura:
@@ -32,7 +32,7 @@ Proyecto para Laboratorio de programación con carrito funcional.
 ▎     if (existente.cantidad<=0){
 ▎         existente.cantidad = 0;
 ▎ }
-▎ Pensá: cuando la cantidad llega a 0, ¿el producto debería quedarse en el carrito? Cuando lo arregles, explicame con tus palabras cuál era el error y cómo lo resolviste.
+▎ Pensá: cuando la cantidad llega a 0, ¿el producto debería quedarse en el carrito? Cuando lo arregles, explicame con tus palabras cuál era el error y cómo lo resolviste.✅
 ▎
 ▎ 4️⃣ Botón "Comprar" y validación en JS
 ▎ • El botón btnComprar de carrito.html no tiene ninguna función. Hacé que, al hacer clic, vacíe el carrito y avise al usuario.
