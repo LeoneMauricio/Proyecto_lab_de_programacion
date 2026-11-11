@@ -45,8 +45,9 @@ export function actualizarBoton(btn, carrito) {
     const producto = carrito.find(item => item.id === Number(btn.dataset.id));
     const cantidad = producto ? producto.cantidad : 0;
 
-    btn.textContent = cantidad > 0 ? `Agregado ${cantidad}` : "Agregar";
+    btn.textContent = cantidad > 0 ? `Agregado` : "Agregar";
     btn.style.backgroundColor = cantidad > 0 ? "green" : "";
+    btn.disabled = cantidad > 0? true : false;
 }
 
 export function debounce(funcion, time) {

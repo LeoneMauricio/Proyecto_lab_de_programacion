@@ -1,4 +1,4 @@
-import {agregar_carrito, restar_carrito, guardarCarrito, actualizarBoton,
+import {agregar_carrito, guardarCarrito, actualizarBoton,
     actualizarContador,debounce} 
 from './utils/funciones.js'  
 import {productos} from './utils/datos.js'  
@@ -24,9 +24,6 @@ function renderProductos(productos) {
             <span class="producto__precio" data-precio="${producto.precio}">${producto.precio} Doblones</span>
             <div class="producto__acciones">
                 <button class="btn btn--agregar" data-id="${producto.id}">Agregar</button>
-                <button class="btn btn--sumar" data-id="${producto.id}">➕</button>
-                <button class="btn btn--restar" data-id="${producto.id}">➖</button>
-                <button class="btn btn--borrar" data-id="${producto.id}">🗑️</button>
             </div>
         </div>
     </div>
@@ -45,9 +42,6 @@ document.querySelectorAll(".btn--agregar").forEach(btn => {
 
 grilla_prod.addEventListener("click", (e) => {
     const btnAgregar = e.target.closest(".btn--agregar");
-    const btnSumar = e.target.closest(".btn--sumar");
-    const btnRestar = e.target.closest(".btn--restar");
-    const btnBorrar = e.target.closest(".btn--borrar");
 
     if (btnAgregar) {
         const id = Number(btnAgregar.dataset.id);
@@ -55,41 +49,6 @@ grilla_prod.addEventListener("click", (e) => {
         agregar_carrito(productos, carrito, id);
         guardarCarrito(carrito);
         actualizarBoton(btnAgregar, carrito);
-    }
-
-    if (btnSumar) {
-        const id = Number(btnSumar.dataset.id);
-
-        agregar_carrito(productos, carrito, id);
-        guardarCarrito(carrito);
-
-        document.querySelectorAll(".btn--agregar").forEach(btn => {
-            actualizarBoton(btn, carrito);
-        });
-    }
-
-    if (btnRestar) {
-        const id = Number(btnRestar.dataset.id);
-
-        restar_carrito(productos, carrito, id);
-        guardarCarrito(carrito);
-
-        document.querySelectorAll(".btn--agregar").forEach(btn => {
-            actualizarBoton(btn, carrito);
-        });
-    }
-
-    if (btnBorrar) {
-        const id = Number(btnBorrar.dataset.id);
-
-        carrito = carrito.filter(item => Number(item.id) !== id);
-
-        guardarCarrito(carrito);
-        actualizarContador(carrito);
-
-        document.querySelectorAll(".btn--agregar").forEach(btn => {
-            actualizarBoton(btn, carrito);
-        });
     }
 });
 
@@ -129,3 +88,4 @@ buscador.addEventListener(
     "input",
     debounce(buscarProductos, 300)
 );
+
