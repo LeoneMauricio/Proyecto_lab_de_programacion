@@ -47,61 +47,50 @@
         <h1 class="registro__titulo" id="registroTitulo">Crea tu cuenta</h1>
         <p class="registro__descripcion">Regístrate para descubrir y compartir productos en nuestro bazar.</p>
 
-        <form class="registro__formulario" action="#" method="post">
-            <div class="registro__campo">
-                <label for="nombre">Nombre completo</label>
-                <input
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    autocomplete="name"
-                    placeholder="Tu nombre"
-                    required>
-            </div>
+        
+<form class="registro__formulario" id="formRegistro" novalidate>
 
-            <div class="registro__campo">
-                <label for="correo">Correo electrónico</label>
-                <input
-                    type="email"
-                    id="correo"
-                    name="correo"
-                    autocomplete="email"
-                    placeholder="nombre@ejemplo.com"
-                    required>
-            </div>
+    <div class="registro__campo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre"
+            autocomplete="name" placeholder="Tu nombre">
+        <small class="error" id="errorNombre"></small>
+    </div>
 
-            <div class="registro__campo">
-                <label for="contrasena">Contraseña</label>
-                <input
-                    type="password"
-                    id="contrasena"
-                    name="contrasena"
-                    autocomplete="new-password"
-                    minlength="8"
-                    placeholder="Al menos 8 caracteres"
-                    required>
-            </div>
+    <div class="registro__campo">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo"
+            autocomplete="email" placeholder="nombre@ejemplo.com">
+        <small class="error" id="errorCorreo"></small>
+    </div>
 
-            <div class="registro__campo">
-                <label for="confirmarContrasena">Confirmar contraseña</label>
-                <input
-                    type="password"
-                    id="confirmarContrasena"
-                    name="confirmarContrasena"
-                    autocomplete="new-password"
-                    minlength="8"
-                    placeholder="Repite tu contraseña"
-                    required>
-            </div>
+    <div class="registro__campo">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena"
+            minlength="8" placeholder="Al menos 8 caracteres">
+        <small class="error" id="errorContrasena"></small>
+    </div>
 
-            <button class="registro__boton" type="submit">Crear cuenta</button>
-        </form>
+    <div class="registro__campo">
+        <label for="confirmarContrasena">Confirmar contraseña</label>
+        <input type="password" id="confirmarContrasena"
+            name="confirmarContrasena"
+            placeholder="Repite tu contraseña">
+        <small class="error" id="errorConfirmar"></small>
+    </div>
+
+    <button class="registro__boton" type="submit">
+        Crear cuenta
+    </button>
+
+</form>
+
 
         <p class="registro__inicio">
             ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a>
         </p>
     </section>
 </main>
-
+<script type="module" src="registro.js"></script>
 </body>
 </html>

@@ -35,7 +35,7 @@ Proyecto para Laboratorio de programación con carrito funcional.
 ▎ Pensá: cuando la cantidad llega a 0, ¿el producto debería quedarse en el carrito? Cuando lo arregles, explicame con tus palabras cuál era el error y cómo lo resolviste.✅
 ▎
 ▎ 4️⃣ Botón "Comprar" y validación en JS
-▎ • El botón btnComprar de carrito.html no tiene ninguna función. Hacé que, al hacer clic, vacíe el carrito y avise al usuario.
+▎ • El botón btnComprar de carrito.html no tiene ninguna función. Hacé que, al hacer clic, vacíe el carrito y avise al usuario.✅
 ▎ • En login.html y registro.html, usá preventDefault() en el submit y validá en JS con un mensaje de error debajo de cada campo:
 ▎ form.addEventListener("submit", (e) => {
 ▎   e.preventDefault();
@@ -43,7 +43,7 @@ Proyecto para Laboratorio de programación con carrito funcional.
 ▎     errorCorreo.textContent = "Ingresá un correo válido.";
 ▎     return;
 ▎   }
-▎ });
+▎ });✅
 ▎
 ▎ 5️⃣ Un detalle en index.html
 ▎ En la línea 5 tenés <meta name="descripción" content="width=device-width, initial-scale=1.0">. Compará con bazar.html y fijate cuál es la diferencia. En el celular, ¿cómo se ve tu portada?✅

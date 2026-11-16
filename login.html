@@ -41,13 +41,19 @@
     </div>
 </header>
 
+
 <main class="login">
     <section class="login__tarjeta" aria-labelledby="loginTitulo">
+
         <p class="login__etiqueta">Mercado Pirata</p>
         <h1 class="login__titulo" id="loginTitulo">¡Qué bueno verte!</h1>
-        <p class="login__descripcion">Inicia sesión para continuar en el bazar.</p>
+        <p class="login__descripcion">
+            Inicia sesión para continuar en el bazar.
+        </p>
 
-        <form class="login__formulario" action="#" method="post">
+        <form class="login__formulario" id="formLogin"
+            action="#" method="post" novalidate>
+
             <div class="login__campo">
                 <label for="correo">Correo electrónico</label>
                 <input
@@ -55,8 +61,9 @@
                     id="correo"
                     name="correo"
                     autocomplete="email"
-                    placeholder="nombre@ejemplo.com"
-                    required>
+                    placeholder="nombre@ejemplo.com">
+
+                <small class="error" id="errorCorreo"></small>
             </div>
 
             <div class="login__campo">
@@ -66,18 +73,24 @@
                     id="contrasena"
                     name="contrasena"
                     autocomplete="current-password"
-                    placeholder="Tu contraseña"
-                    required>
+                    placeholder="Tu contraseña">
+
+                <small class="error" id="errorContrasena"></small>
             </div>
 
-            <button class="login__boton" type="submit">Iniciar sesión</button>
+            <button class="login__boton" type="submit">
+                Iniciar sesión
+            </button>
+
         </form>
 
         <p class="login__registro">
-            ¿Todavía no tienes cuenta? <a href="registro.html">Regístrate</a>
+            ¿Todavía no tienes cuenta?
+            <a href="registro.html">Regístrate</a>
         </p>
+
     </section>
 </main>
-
+<script type="module" src="login.js"></script>
 </body>
 </html>
