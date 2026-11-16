@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
     }
 
-    const confirmar = Swal.fire({
+    Swal.fire({
     title: "¿Finalizar compra?",
     text: "¿Deseás finalizar tu compra?",
     icon: "question",
@@ -120,13 +120,46 @@ guardarCarrito([]);
         renderCarrito();
     });
 
+    // btnVaciar.addEventListener("click", () => {
+    //     carrito = [];
+    //     guardarCarrito(carrito);
+    //     renderCarrito();
+    // });
     btnVaciar.addEventListener("click", () => {
+
+    if (carrito.length === 0) return;
+
+    Swal.fire({
+        title: "¿Vaciar carrito?",
+        text: "Se eliminarán todos los productos del carrito.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Sí, vaciar carrito",
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#dc2626",
+        cancelButtonColor: "#6b7280",
+        reverseButtons: true
+    }).then((result) => {
+
+        if (!result.isConfirmed) return;
+
         carrito = [];
+
         guardarCarrito(carrito);
+
         renderCarrito();
+
+        actualizarContador([]);
+
+        Swal.fire({
+            title: "¡Carrito vacío!",
+            text: "Se eliminaron todos los productos.",
+            icon: "success",
+            confirmButtonText: "Aceptar"
+        });
+
     });
 
-    
-
+});
     renderCarrito();
 });

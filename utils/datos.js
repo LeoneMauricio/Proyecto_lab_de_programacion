@@ -63,5 +63,37 @@ export const productos = [
         categoria: "Navegación",
         descripcion: "Dimensiones: 25m x 6m",
         precio: 10000.00
+    },
+    {
+        id: 9,
+        imagen: "./img/mono.png",
+        nombre: "Mono",
+        categoria: "Mascota",
+        descripcion: "Todo capitan tiene el suyo",
+        precio: 100.00
+    },
+    {
+        id: 10,
+        imagen: "./img/ron.webp",
+        nombre: "Ron",
+        categoria: "Bebidas",
+        descripcion: "El 1° brebaje más elegido por los piratas",
+        precio: 5.00
+    },
+    {
+        id: 11,
+        imagen: "./img/pistola-de-chispas.webp",
+        nombre: "Pistola de chispas",
+        categoria: "Armas",
+        descripcion: "Pistola de chispas - Hierro",
+        precio: 50.00
+    },
+    {
+        id: 12,
+        imagen: "./img/cañon.png",
+        nombre: "Cañón",
+        categoria: "Armas",
+        descripcion: "Cañón de hierro 100 kg",
+        precio: 500.00
     }
 ]
