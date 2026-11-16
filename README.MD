@@ -24,7 +24,7 @@ Proyecto para Laboratorio de programación con carrito funcional.
 ▎     return [];
 ▎   }
 ▎ }
-▎ Usala en los dos archivos y hacé lo mismo al guardar.
+▎ Usala en los dos archivos y hacé lo mismo al guardar.✅
 ▎
 ▎ 3️⃣ Corregir un error al restar 🐞
 ▎ Agregá un producto, restalo hasta 0 y andá a la página del carrito. Fijate qué aparece. Revisá utils/funciones.js, función restar_carrito, líneas 28 a 31:
@@ -46,4 +46,4 @@ Proyecto para Laboratorio de programación con carrito funcional.
 ▎ });
 ▎
 ▎ 5️⃣ Un detalle en index.html
-▎ En la línea 5 tenés <meta name="descripción" content="width=device-width, initial-scale=1.0">. Compará con bazar.html y fijate cuál es la diferencia. En el celular, ¿cómo se ve tu portada?
+▎ En la línea 5 tenés <meta name="descripción" content="width=device-width, initial-scale=1.0">. Compará con bazar.html y fijate cuál es la diferencia. En el celular, ¿cómo se ve tu portada?✅

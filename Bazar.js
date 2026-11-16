@@ -1,5 +1,5 @@
 import {agregar_carrito, guardarCarrito, actualizarBoton,
-    actualizarContador,debounce} 
+    actualizarContador,debounce, leerCarrito} 
 from './utils/funciones.js'  
 import {productos} from './utils/datos.js'  
 
@@ -32,7 +32,7 @@ function renderProductos(productos) {
 
 renderProductos(productos);
 
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let carrito = leerCarrito();
 
 actualizarContador(carrito);
 

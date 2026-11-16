@@ -1,4 +1,24 @@
 
+export function leerCarrito() {
+    try {
+        return JSON.parse(localStorage.getItem("carrito")) || [];
+    } catch (error) {
+        console.error("Error al leer el carrito:", error);
+        return [];
+    }
+}
+
+export function guardarCarrito(carrito) {
+    try {
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    } catch (error) {
+        console.error("Error al guardar el carrito:", error);
+        return false;
+    }
+
+    return true;
+}
+
 export function actualizarContador(carrito) {
     const total = carrito.reduce((acc, item) => acc + item.cantidad, 0);
     const contador = document.getElementById("contadorCarrito");
@@ -37,9 +57,6 @@ export function restar_carrito(arr_productos, carrito, id) {
     actualizarContador(carrito);
     }
 
-export function guardarCarrito(carrito) {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
 
 export function actualizarBoton(btn, carrito) {
     const producto = carrito.find(item => item.id === Number(btn.dataset.id));

@@ -1,4 +1,5 @@
-import { agregar_carrito, restar_carrito, guardarCarrito, actualizarContador } from './utils/funciones.js'
+import { agregar_carrito, restar_carrito, guardarCarrito, actualizarContador, leerCarrito}
+from './utils/funciones.js'
 import { productos } from './utils/datos.js'
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const carritoVacio = document.getElementById("carritoVacio");
     const btnVaciar = document.getElementById("btnVaciar");
 
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let carrito = leerCarrito();
 
     function renderCarrito() {
         listaCarrito.innerHTML = "";
