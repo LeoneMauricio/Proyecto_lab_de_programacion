@@ -74,3 +74,4 @@ export function debounce(funcion, time) {
         timer = setTimeout(() => funcion.apply(this, args), time);
     };
 }
+

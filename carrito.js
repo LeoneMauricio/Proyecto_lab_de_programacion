@@ -1,4 +1,5 @@
-import { agregar_carrito, restar_carrito, guardarCarrito, actualizarContador, leerCarrito}
+import { agregar_carrito, restar_carrito, guardarCarrito, actualizarContador,
+    leerCarrito}
 from './utils/funciones.js'
 import { productos } from './utils/datos.js'
 
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalElem = document.getElementById("total");
     const carritoVacio = document.getElementById("carritoVacio");
     const btnVaciar = document.getElementById("btnVaciar");
+    const btnCompra = document.getElementById("btnComprar");
 
     let carrito = leerCarrito();
 
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+
         const subtotal = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
         const iva = subtotal * 0.21;
         const total = subtotal + iva;
@@ -45,6 +48,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         actualizarContador(carrito);
     }
+
+    function btnComprar() {
+
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+    }
+
+    const confirmar = confirm("¿Deseás finalizar la compra?");
+
+    if (!confirmar) return;
+
+    guardarCarrito([]);
+
+    carrito = [];
+
+    renderCarrito([]);
+
+    actualizarContador([]);
+
+    alert("¡Compra realizada con éxito!");
+
+}
+    btnCompra.addEventListener("click", btnComprar);
+
 
     listaCarrito.addEventListener("click", (e) => {
         const btnSumar = e.target.closest(".btn--sumar");
@@ -71,6 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
         guardarCarrito(carrito);
         renderCarrito();
     });
+
+    
 
     renderCarrito();
 });
