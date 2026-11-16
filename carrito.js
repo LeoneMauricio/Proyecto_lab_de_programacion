@@ -52,24 +52,50 @@ document.addEventListener("DOMContentLoaded", () => {
     function btnComprar() {
 
     if (carrito.length === 0) {
-        alert("Tu carrito está vacío.");
-        return;
+        Swal.fire({
+        title: "¡Tu carrito está vacío!",
+        text: "Todavía no agregaste ningún producto. ¡Explorá nuestro bazar!",
+        icon: "info",
+        confirmButtonText: "Ver productos",
+        confirmButtonColor: "#2563eb",
+        allowOutsideClick: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "bazar.html";
+        }
+    });
+
+    return;
     }
 
-    const confirmar = confirm("¿Deseás finalizar la compra?");
+    const confirmar = Swal.fire({
+    title: "¿Finalizar compra?",
+    text: "¿Deseás finalizar tu compra?",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: "Sí, finalizar compra",
+    cancelButtonText: "Seguir comprando",
+    confirmButtonColor: "#16a34a",
+    cancelButtonColor: "#6b7280",
+    reverseButtons: true
+}).then((result) => {
+    if (!result.isConfirmed) return;
+guardarCarrito([]);
 
-    if (!confirmar) return;
+        carrito = [];
 
-    guardarCarrito([]);
+        renderCarrito([]);
 
-    carrito = [];
+        actualizarContador([]);
 
-    renderCarrito([]);
+        Swal.fire({
+            title: "¡Compra realizada!",
+            text: "Gracias por comprar en Mercado Pirata.",
+            icon: "success",
+            confirmButtonText: "Aceptar"
+        });
 
-    actualizarContador([]);
-
-    alert("¡Compra realizada con éxito!");
-
+    });
 }
     btnCompra.addEventListener("click", btnComprar);
 

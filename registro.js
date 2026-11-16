@@ -56,7 +56,17 @@ formulario.addEventListener("submit", (e) => {
 
     if (!valido) return;
 
-    alert("¡Registro validado correctamente!");
+    Swal.fire({
+        title: "Hola pirata ",
+        text: "¡Bienvenido a Mercado Pirata!",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#16a34a",
+        allowOutsideClick: false
+}).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = "index.html";
 
-    window.location.href = "index.html";
-});
+    }
+});})
+

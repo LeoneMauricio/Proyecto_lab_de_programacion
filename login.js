@@ -12,13 +12,11 @@ formulario.addEventListener("submit", (e) => {
 
     e.preventDefault();
 
-    // Limpiar errores anteriores
     errorCorreo.textContent = "";
     errorContrasena.textContent = "";
 
     let valido = true;
 
-    // Validar correo
     const expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!expresionCorreo.test(correo.value.trim())) {
@@ -27,7 +25,6 @@ formulario.addEventListener("submit", (e) => {
         valido = false;
     }
 
-    // Validar contraseña
     if (contrasena.value.trim() === "") {
 
         errorContrasena.textContent = "Ingresá tu contraseña.";
@@ -36,8 +33,16 @@ formulario.addEventListener("submit", (e) => {
 
     if (!valido) return;
 
-    alert("¡Cuenta creada correctamente!");
+    Swal.fire({
+        title: "Hola pirata ",
+        text: "¡Bienvenido a Mercado Pirata!",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#16a34a",
+        allowOutsideClick: false
+}).then((result) => {
+    if (result.isConfirmed) {
+        window.location.href = "index.html";
 
-    window.location.href = "index.html";
-
-});
+    }
+});})
