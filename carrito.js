@@ -120,11 +120,7 @@ guardarCarrito([]);
         renderCarrito();
     });
 
-    // btnVaciar.addEventListener("click", () => {
-    //     carrito = [];
-    //     guardarCarrito(carrito);
-    //     renderCarrito();
-    // });
+
     btnVaciar.addEventListener("click", () => {
 
     if (carrito.length === 0) return;
